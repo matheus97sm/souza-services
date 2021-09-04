@@ -30,9 +30,9 @@
   <link rel="profile" href="http://gmpg.org/xfn/11">
   <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 
-  <?php wp_head(); ?>
-  <?php include "funcoesSalt.php";  ?>
+  <link rel="stylesheet" href="<?=get_template_directory_URI()?>/style.css" />
 
+  <?php wp_head(); ?>
 </head>
 
 <body <?php body_class(); ?>>

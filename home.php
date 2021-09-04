@@ -3,8 +3,8 @@
  * Template Name: home
  *
  * @package WordPress
- * @subpackage agenciaSalt
- * @since agenciaSalt
+ * @subpackage matheusFonseca
+ * @since matheusFonseca
  */
 get_header(); ?>
 

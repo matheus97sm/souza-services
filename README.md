@@ -1,4 +1,4 @@
-# SALT PADRÃO
+# WP Padrão
 
 Para começar a realizar qualquer tipo de ação no tema, leia as instruções abaixo:
 
