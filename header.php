@@ -35,22 +35,21 @@
   <?php wp_head(); ?>
 </head>
 
-<body <?php body_class(); ?>>
-
-  <div id="fb-root"></div>
-  <script>
-  (function(d, s, id) {
-    var js, fjs = d.getElementsByTagName(s)[0];
-    if (d.getElementById(id)) return;
-    js = d.createElement(s);
-    js.id = id;
-    js.src = "//connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v2.10&appId=243085426048812";
-    fjs.parentNode.insertBefore(js, fjs);
-  }(document, 'script', 'facebook-jssdk'));
-  </script>
-
+<body <?php body_class();?> >
   <header class="header">
-    <div>
-      <?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_class' => 'nav-menu', 'menu_id' => 'primary-menu' ) ); ?>
+    <div class="header-container">
+      <a href="<?=site_url()?>" class="header-logo">
+        <img src="<?=get_template_directory_URI()?>/img/src/logo.svg" alt="Souza Services Brand">
+      </a>
+
+      <?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu' => 'MenuTopo', 'menu_class' => 'nav-menu', 'menu_id' => 'primary-menu' ) ); ?>
     </div>
   </header>
+
+  <?php if (!is_front_page()) { ?>
+    <div class="inside-banner">
+      <div class="container">
+        <h1><?=the_title()?></h1>
+      </div>
+    </div>
+  <?php } ?>

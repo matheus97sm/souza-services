@@ -11,13 +11,55 @@
 ?>
 
 <footer class="footer">
-  <? // echo do_shortcode(''); ?>
+  <div class="container">
+    <a href="<?=site_url()?>" class="footer-logo">
+      <img src="<?=get_template_directory_URI()?>/img/src/logo-white.svg" alt="Souza Services Brand" />  
+    </a>
+
+    <div class="sitemap">
+      <h3>Sitemap</h3>
+
+      <?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu' => 'MenuTopo', 'menu_class' => 'nav-menu', 'menu_id' => 'primary-menu' ) ); ?>
+    </div>
+
+    <div class="footer-contact">
+      <h3>Contact</h3>
+
+      <div class="footer-contact-info">
+        <a href="tel:+1555-555-555" target="_blank">+1 555-555-555</a>
+        <a href="mailto:contact@souzaservices.com" target="_blank">contact@souzaservices.com</a>
+      </div>
+
+      <div class="footer-contact-social">
+        <a href="https://instagram.com" target="_blank">
+          <svg width="32" height="32" viewBox="0 0 32 32">
+            <use xlink:href="#instagram"></use>
+          </svg> 
+        </a>
+        
+        <a href="https://facebook.com" target="_blank">
+          <svg width="32" height="32" viewBox="0 0 32 32">
+            <use xlink:href="#facebook"></use>
+          </svg> 
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="copyright">
+    <div class="container">
+      <p>Copyright © www.souzacleaning.com 2022. All rights reserved.</p>
+    </div>
+  </div>
 </footer>
+
+<div style="display: none;">
+  <?php include 'svg.php'; ?>
+</div>
 
 <script src="<?=get_template_directory_URI()?>/app/app.js"></script>
 
 <?php wp_footer(); ?>
 
 </body>
-
 </html>
