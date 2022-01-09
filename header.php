@@ -63,7 +63,7 @@
   <?php if (!is_front_page()) { ?>
     <div class="inside-banner">
       <div class="container">
-        <h1><?=the_title()?></h1>
+        <h1 class="fadeDown" data-anima-tempo><?=the_title()?></h1>
       </div>
     </div>
   <?php } ?>

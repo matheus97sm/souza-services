@@ -94,3 +94,33 @@
     font-size: 22px;
   }    
 }
+
+@media screen and (min-width: 1050px) {
+  .menu {
+    position: static;
+    top: unset;
+    left: unset;
+    width: unset;
+    height: unset;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: unset;
+    box-shadow: unset;
+    transform: unset;
+    transition: unset;
+
+    ul {
+      display: flex;
+
+      li a {
+        padding: 8px 16px;
+        font-size: 14px;
+      }
+    }
+  }
+
+  .menu-hamb {
+    display: none;
+  }
+}

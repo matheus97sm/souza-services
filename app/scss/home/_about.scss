@@ -61,12 +61,35 @@
     }
 
     img {
-      position: absolute;
       top: 20%;
       right: calc(100% + 32px);
       height: 100%;
       opacity: 0.2;
       z-index: -3;
     }
+  }
+}
+
+@media screen and (min-width: 1050px) {
+  .home-about {
+    padding: 128px 0;
+
+    .home-about-logo {
+      width: 340px;
+    }
+  
+    .container {
+      padding: 0 0 0 128px;
+      gap: 96px;
+      grid-template-columns: 1.2fr 1fr;
+      align-items: center;
+    }
+  }
+
+  .home-about-text img {
+    top: 40%;
+    right: calc(100% + 32px);
+    height: 120%;
+    z-index: -3;
   }
 }

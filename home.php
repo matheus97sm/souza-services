@@ -32,11 +32,11 @@ get_header(); ?>
 
 <section class="our-reviews">
   <div class="container">
-    <div class="our-review-title">
+    <div class="our-review-title fadeUp" data-animar>
       <h2>Our reviews</h2>
     </div>
 
-    <div class="reviews">
+    <div class="reviews fadeUp" data-animar>
       <? query_posts( array( 'post_type' => 'reviews', 'posts_per_page' => '9' ) );  ?>
       <?php if ( have_posts() ) : ?>
       <?php while ( have_posts() ) : the_post(); ?>
@@ -66,7 +66,7 @@ get_header(); ?>
 
 <section class="home-services">
   <div class="container">
-    <div class="home-services-title">
+    <div class="home-services-title fadeUp" data-animar>
       <h2>The services
       we provide with
       perfection</h2>
@@ -85,7 +85,7 @@ get_header(); ?>
     ?>
     <?php while ( $child_query->have_posts() ) : $child_query->the_post(); ?>
 
-    <div class="home-services-item">
+    <div class="home-services-item fadeUp" data-animar>
       <div class="home-services-item-img">
         <img src="<?=get_template_directory_URI()?>/img/src/service-1.png" alt="<?=the_title()?>" />
       </div>
@@ -98,25 +98,25 @@ get_header(); ?>
     <?php endwhile; ?>
   </div>
 
-  <a href="<?=the_permalink()?>" class="cta-red cta">All services</a>
+  <a href="<?=the_permalink()?>" class="cta-red cta fadeUp" data-animar>All services</a>
 </section>
 
 <section class="home-about">
   <div class="container">
-    <div class="home-about-img">
+    <div class="home-about-img fadeUp" data-animar>
       <img src="<?=get_template_directory_URI()?>/img/src/about.jpg" alt="About Souza Services" />
     </div>
 
     <div class="home-about-text">
-      <strong>Souza Services</strong>
-      <h2>About Us</h2>
+      <strong class="fadeUp" data-animar>Souza Services</strong>
+      <h2 class="fadeUp" data-animar>About Us</h2>
 
-      <div>
+      <div class="fadeUp" data-animar>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam vel lorem eget ex semper vulputate. Aliquam nec iaculis quam. Quisque ullamcorper libero quis feugiat hendrerit. Praesent luctus eu massa vel ornare. Sed quis iaculis erat. Vivamus sollicitudin, urna eget placerat vulputate, odio tellus placerat lectus, non volutpat tortor diam sed turpis. Sed eget pharetra risus. </p>
         <p>Nunc laoreet sapien placerat lobortis feugiat. Etiam a purus dolor. In pellentesque non risus in pharetra. Nullam pharetra diam non maximus egestas. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nulla facilisi.</p>
       </div>
 
-      <a href="<?=site_url()?>/about" class="cta cta-white">About Us</a>
+      <a href="<?=site_url()?>/about" class="cta cta-white fadeUp" data-animar>About Us</a>
 
       <img 
         src="<?=get_template_directory_URI()?>/img/src/wave.svg" 
@@ -135,7 +135,7 @@ get_header(); ?>
 
 <section class="home-blog">
   <div class="container">
-    <h2>Last blog posts</h2>
+    <h2 class="fadeUp" data-animar>Last blog posts</h2>
 
     <div class="home-blog-wrapper">
       <div class="home-blog-buttons"></div>

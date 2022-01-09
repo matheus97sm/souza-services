@@ -53,6 +53,14 @@
     height: 24px;
     background-color: transparent;
     border: none;
+    box-shadow: 0 0 24px rgba(0, 0, 0, 0);
+    border-radius: 50%;
+    transition: .3s box-shadow ease-out;
+    cursor: pointer;
+
+    &:hover {
+      box-shadow: 0 0 24px rgba(0, 0, 0, .15);
+    }
 
     &.reviews-right {
       transform: rotate(180deg);
@@ -71,6 +79,19 @@
     .container {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
+    }
+  }
+}
+
+@media screen and (min-width: 1050px) {
+  .our-reviews {
+    padding: 156px 0 128px;
+
+    .container {
+      display: grid;
+      padding: 0 128px 0 156px;
+      gap: 128px;
+      grid-template-columns: repeat(2fr, 1fr);
     }
   }
 }

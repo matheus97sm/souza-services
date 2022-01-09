@@ -17,7 +17,7 @@
   }
 
   img {
-    margin-top: 32px;
+    margin: 32px 0;
     width: 100%;
     height: auto;
   }
@@ -33,6 +33,33 @@
 
     p, ul, ol {
       padding-left: 156px;
+    }
+
+    img, figure {
+      padding-left: 0;
+    }
+  }
+}
+
+@media screen and (min-width: 1050px) {
+  .content-img {
+    height: 512px;
+  }
+
+  .content-text {
+    padding: 0;
+     
+    .container {
+      padding: 128px 0 128px 256px;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      padding-left: 156px;
+      margin-top: 32px;
+    }
+
+    p, ul, ol {
+      padding-left: 196px;
     }
 
     img, figure {

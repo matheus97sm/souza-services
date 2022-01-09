@@ -106,3 +106,38 @@
     }
   }
 }
+
+@media screen and (min-width: 1050px) {
+  .home-blog {
+    padding: 256px 0 128px;
+  
+    .container h2 {
+      margin-bottom: 128px;
+    }
+  }
+
+  .home-blog-wrapper {
+    padding: 0 64px;
+  
+    .home-blog-wave {
+      width: 100%;
+      left: 30%;
+    }
+  }
+
+  .home-blog-card {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    border-radius: 64px;
+
+    .home-blog-img {
+      border-radius: 64px 0 0 64px;
+    }
+  
+    .home-blog-text {
+      padding: 96px 64px;
+      transform: translate3d(-32px, 0, 0);
+      border-radius: 64px;
+    }
+  }
+}

@@ -59,11 +59,22 @@ h2 {
   font-weight: bolder;
   letter-spacing: .1rem;
   text-transform: uppercase;
+  transition: .3s color, .3s background-color;
+
+  &:hover {
+    background-color: $red;
+    color: #fff;
+  }
 }
 
 .cta-red {
   background-color: $red;
   color: #fff;
+  
+  &:hover {
+    background-color: #fff;
+    color: $red;
+  }
 }
 
 @import './scss/header/header';

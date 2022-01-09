@@ -34,3 +34,25 @@
     gap: 64px;
   }
 }
+
+@media screen and (min-width: 1050px) {
+  .about {
+    padding: 128px 0 256px;
+
+    .home-about-logo {
+      width: 340px;
+    }
+  
+    .container {
+      padding: 0 0 0 128px;
+      gap: 96px;
+      grid-template-columns: 1.2fr 1fr;
+      align-items: center;
+    }
+  }
+
+  .mission .container  {
+    padding: 64px 64px 128px;
+    gap: 96px;
+  }
+}
