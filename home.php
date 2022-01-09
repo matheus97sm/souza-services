@@ -10,7 +10,7 @@ get_header(); ?>
 
 <section class="home-banner">
   <div class="container">
-    <div class="home-banner-text">
+    <div class="home-banner-text fadeUp" data-anima-tempo>
       <h1>A big title here</h1>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla id magna nec nibh tristique porttitor non quis massa. Etiam gravida consequat pharetra.</p>
 
@@ -18,9 +18,11 @@ get_header(); ?>
         <a href="<?=site_url()?>/contact" class="cta cta-red">Contact Us</a>
         <a href="<?=site_url()?>/about" class="cta cta-white">About Us</a>
       </div>
+
+      <div class="line" data-animar></div>
     </div>
 
-    <div class="home-banner-img">
+    <div class="home-banner-img" data-anima-tempo>
       <div class="grey-box"></div>
       <div class="orange-box"></div>
       <img src="<?=get_template_directory_URI()?>/img/src/banner.png" alt="Souza Services Website" />

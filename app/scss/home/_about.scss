@@ -43,3 +43,30 @@
     z-index: -3;
   }
 }
+
+@media screen and (min-width: 768px) {
+  .home-about {
+    padding: 128px 0;
+
+    .container {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  .home-about-text {
+    strong {
+      color: $darkGrey;
+      letter-spacing: .05rem;
+    }
+
+    img {
+      position: absolute;
+      top: 20%;
+      right: calc(100% + 32px);
+      height: 100%;
+      opacity: 0.2;
+      z-index: -3;
+    }
+  }
+}

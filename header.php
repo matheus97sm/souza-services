@@ -44,7 +44,7 @@
 </head>
 
 <body <?php body_class();?> >
-  <header class="header">
+  <header class="header" data-anima-tempo>
     <div class="container">
       <a href="<?=site_url()?>" class="header-logo">
         <img src="<?=get_template_directory_URI()?>/img/src/logo.svg" alt="Souza Services Brand">

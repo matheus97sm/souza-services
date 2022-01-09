@@ -3,6 +3,7 @@ export default function reviews() {
   const starsWrapper = document.querySelectorAll('.review-stars');
   const buttonLeft = document.querySelector('.reviews-left');
   const buttonRight = document.querySelector('.reviews-right');
+  let actualReview = 0;
 
   if (reviewsArray.length === 0 || !buttonLeft || !buttonRight) return null;
 
@@ -25,5 +26,29 @@ export default function reviews() {
 
       starsWrapper[index].appendChild(outlineStar);
     }
+  });
+
+  buttonLeft.addEventListener('click', e => {
+    actualReview = actualReview === 0 ? reviewsArray.length - 1 : actualReview - 1;
+
+    reviewsArray.forEach((review, index) => {
+      review.classList.remove('active');
+
+      if (index === actualReview) {
+        review.classList.add('active');
+      }
+    });
+  });
+
+  buttonRight.addEventListener('click', e => {
+    actualReview = actualReview === reviewsArray.length - 1 ? 0 : actualReview + 1;
+
+    reviewsArray.forEach((review, index) => {
+      review.classList.remove('active');
+
+      if (index === actualReview) {
+        review.classList.add('active');
+      }
+    });
   });
 }

@@ -20,9 +20,11 @@ get_header(); ?>
       </a>
 
       <div class="blog-text">
-        <h3><?=the_title()?></h3>
+        <div>
+          <h3><?=the_title()?></h3>
 
-        <p><?=the_field('resume')?></p>
+          <p><?=the_field('resume')?></p>
+        </div>
 
         <a href="<?=the_permalink()?>" class="cta cta-red">
           read more

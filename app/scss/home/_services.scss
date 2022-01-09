@@ -43,3 +43,34 @@
   border-radius: 50%;
   box-shadow: 0 12px 12px rgba(0, 0, 0, .15);
 }
+
+@media screen and (min-width: 768px) {
+  .home-services {
+    display: grid;
+    padding: 64px 0;
+    background-color: $lightGrey;
+  
+    .container {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 48px;
+
+      .home-services-title {
+        align-self: center;
+      }
+    }
+
+    > .cta {
+      margin: 128px auto 0;
+    }
+  }
+
+  .home-services-item {
+    align-items: flex-start;
+
+    p {
+      max-width: 320px;
+      text-align: left;
+    }
+  }
+}

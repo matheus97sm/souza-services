@@ -22,3 +22,21 @@
     height: auto;
   }
 }
+
+@media screen and (min-width: 768px) {
+  .content-text {
+    padding: 64px 0 128px 64px;
+
+    h1, h2, h3, h4, h5, h6 {
+      padding-left: 128px;
+    }
+
+    p, ul, ol {
+      padding-left: 156px;
+    }
+
+    img, figure {
+      padding-left: 0;
+    }
+  }
+}
