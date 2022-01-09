@@ -7,7 +7,7 @@ export default function openMenu() {
   menuHamb.addEventListener("click", e => {
     e.preventDefault();
 
-    menu.classList.toggle("ativo");
-    menuHamb.classList.toggle("ativo");
+    menu.classList.toggle("active");
+    menuHamb.classList.toggle("active");
   });
 }

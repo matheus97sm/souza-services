@@ -1,0 +1,18 @@
+.header {
+  width: 100%;
+  padding: 1rem 0;
+  z-index: 999;
+
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.header-logo img {
+  width: 130px;
+}
+
+@import './menu';
+@import './bannerInside';

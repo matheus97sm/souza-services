@@ -14,10 +14,10 @@ get_header(); ?>
     <?php if ( have_posts() ) : ?>
     <?php while ( have_posts() ) : the_post(); ?>
 
-    <a class="blog-card" href="<?=the_permalink()?>">
-      <div class="blog-img">
+    <div class="blog-card" href="<?=the_permalink()?>">
+      <a href="<?=the_permalink()?>" class="blog-img">
         <img src="<?=catch_that_image(2)?>" alt="<?=the_title()?>" />
-      </div>
+      </a>
 
       <div class="blog-text">
         <h3><?=the_title()?></h3>
@@ -28,7 +28,7 @@ get_header(); ?>
           read more
         </a>
       </div>
-    </a>
+    </div>
 
     <?php endwhile; ?>
     <?php endif; ?>

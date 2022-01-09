@@ -15,7 +15,10 @@ get_header(); ?>
     <?php while ( have_posts() ) : the_post(); ?>
 
     <div class="faq-question">
-      <h3><?=the_title()?></h3>
+      <h3>
+        <span><?=the_title()?></span>
+        <div></div>
+      </h3>
       
       <div class="faq-question-text">
         <?=the_content()?>

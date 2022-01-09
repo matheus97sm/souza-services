@@ -1,0 +1,51 @@
+.contact {
+  padding: 0 0 64px;
+
+  .container {
+    display: grid;
+    gap: 32px;
+
+    form {
+      display: grid;
+      gap: 8px;
+
+      p {
+        margin: 0;
+
+        br {
+          display: none;
+        }
+      }
+
+      label {
+        display: block;
+        color: $darkGrey;
+        font-size: 14px;
+        letter-spacing: .02rem;
+        margin-bottom: 8px;
+      }
+
+      input, 
+      textarea {
+        width: 100%;
+        padding: 8px 16px;
+        border: 1px solid #F6C7B3;
+        border-radius: 12px;
+
+        &::placeholder {
+          color: #F6C7B3;
+        }
+      }
+
+      input[type="submit"] {
+        justify-content: center;
+        background-color: $red;
+        border: 1px solid $red;
+        color: #fff;
+        font-weight: bolder;
+        letter-spacing: .1rem;
+        text-transform: uppercase;
+      }
+    }
+  }
+}

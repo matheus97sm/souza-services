@@ -1,9 +1,20 @@
+$darkGrey: #717171;
+$grey: #A8A8A8;
+$lightGrey: #F1F1F1;
+$red: #ee2424;
+$orange: #f26949;
+
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
   outline: none;
   -webkit-font-smoothing: antialiased;
+  font-family: 'Lato', sans-serif;
+}
+
+body {
+  font-size: 16px;
 }
 
 ul,
@@ -16,6 +27,52 @@ a {
   text-decoration: none;
 }
 
+p {
+  margin: 1rem 0;
+  font-size: 1rem;
+  letter-spacing: .03rem;
+  line-height: 1.5rem;
+  color: $grey;
+}
+
+h2 {
+  color: $darkGrey;
+  font-size: 44px;
+  font-weight: lighter;
+  letter-spacing: .15rem;
+}
+
+.container {
+  width: 90%;
+  max-width: 1050px;
+  margin: 0 auto;
+}
+
+.cta {
+  display: flex;
+  padding: 8px 32px;
+  background-color: #fff;
+  box-shadow: 6px 6px 12px rgba(0, 0, 0, .15);
+  border-radius: 16px;
+  color: $red;
+  font-size: 12px;
+  font-weight: bolder;
+  letter-spacing: .1rem;
+  text-transform: uppercase;
+}
+
+.cta-red {
+  background-color: $red;
+  color: #fff;
+}
+
 @import './scss/header/header';
+@import './scss/home';
+@import './scss/about';
+@import './scss/services';
+@import './scss/blog';
+@import './scss/faq';
+@import './scss/contact';
+@import './scss/content';
 @import './scss/footer/footer';
 @import './animation';

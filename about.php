@@ -23,8 +23,6 @@ get_header(); ?>
         <p>Nunc laoreet sapien placerat lobortis feugiat. Etiam a purus dolor. In pellentesque non risus in pharetra. Nullam pharetra diam non maximus egestas. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nulla facilisi.</p>
       </div>
 
-      <a href="<?=site_url()?>/about" class="cta cta-white">About Us</a>
-
       <img 
         src="<?=get_template_directory_URI()?>/img/src/wave.svg" 
         alt="About Souza Services" 

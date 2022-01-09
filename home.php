@@ -39,11 +39,11 @@ get_header(); ?>
       <?php if ( have_posts() ) : ?>
       <?php while ( have_posts() ) : the_post(); ?>
 
-      <div class="review">
+      <div class="review" data-stars="<?=the_field('stars')?>">
         <h4><?=the_title()?></h4>
         <p><?=the_content()?></p>
 
-        <div class="review-stars" data-stars="<?=the_field('stars')?>"></div>
+        <div class="review-stars"></div>
       </div>
 
       <?php endwhile; ?>
@@ -68,33 +68,35 @@ get_header(); ?>
       <h2>The services
       we provide with
       perfection</h2>
-
-      <?php
-        $args = array(
-          'post_parent' => 13,
-          'post_type' => 'page',
-          'orderby' => 'menu_order',
-          'meta_key' => 'featured',
-	        'meta_value' => true
-        );
-
-        $child_query = new WP_Query( $args );
-      ?>
-      <?php while ( $child_query->have_posts() ) : $child_query->the_post(); ?>
-
-      <a href="<?=the_permalink()?>" class="home-services-item">
-        <div class="home-services-item-img">
-          <img src="<?=get_template_directory_URI()?>/img/src/service-1.png" alt="<?=the_title()?>" />
-        </div>
-
-        <h5><?=the_title()?></h5>
-        <p><?=the_field('resume')?></p>
-        <a href="<?=the_permalink()?>" class="cta-white cta"></a>
-      </a>
-
-      <?php endwhile; ?>
     </div>
+
+    <?php
+      $args = array(
+        'post_parent' => 13,
+        'post_type' => 'page',
+        'orderby' => 'menu_order',
+        'meta_key' => 'featured',
+        'meta_value' => true
+      );
+
+      $child_query = new WP_Query( $args );
+    ?>
+    <?php while ( $child_query->have_posts() ) : $child_query->the_post(); ?>
+
+    <div class="home-services-item">
+      <div class="home-services-item-img">
+        <img src="<?=get_template_directory_URI()?>/img/src/service-1.png" alt="<?=the_title()?>" />
+      </div>
+
+      <h5><?=the_title()?></h5>
+      <p><?=the_field('resume')?></p>
+      <a href="<?=the_permalink()?>" class="cta-white cta">See more</a>
+    </div>
+
+    <?php endwhile; ?>
   </div>
+
+  <a href="<?=the_permalink()?>" class="cta-red cta">All services</a>
 </section>
 
 <section class="home-about">
@@ -123,7 +125,7 @@ get_header(); ?>
   </div>
 
   <img 
-    src="<?=get_template_directory_URI()?>/img/src/logo.svg" 
+    src="<?=get_template_directory_URI()?>/img/src/brand.svg" 
     alt="Souza Services Brand" 
     class="home-about-logo" 
   />
@@ -141,10 +143,10 @@ get_header(); ?>
         <?php if ( have_posts() ) : ?>
         <?php while ( have_posts() ) : the_post(); ?>
 
-        <a class="home-blog-card" href="<?=the_permalink()?>">
-          <div class="home-blog-img">
+        <div class="home-blog-card">
+          <a href="<?=the_permalink()?>" class="home-blog-img">
             <img src="<?=catch_that_image(2)?>" alt="<?=the_title()?>" />
-          </div>
+          </a>
 
           <div class="home-blog-text">
             <h3><?=the_title()?></h3>
@@ -155,7 +157,7 @@ get_header(); ?>
               read more
             </a>
           </div>
-        </a>
+        </div>
 
         <?php endwhile; ?>
         <?php endif; ?>

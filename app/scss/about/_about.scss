@@ -1,0 +1,19 @@
+.about {
+  position: relative;
+  width: 100%;
+  padding: 0 0 128px;
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    gap: 64px;
+  }
+
+  .home-about-logo {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 200px;
+    opacity: 0.5;
+  }
+}

@@ -24,7 +24,9 @@ get_header(); ?>
     <a href="<?=the_permalink()?>" class="services-item">
       <img src="<?=catch_that_image(1)?>" alt="<?=the_title()?>" />
       
-      <h5><?=the_title()?></h5>
+      <div>
+        <h5><?=the_title()?></h5>
+      </div>
     </a>
 
     <?php endwhile; ?>
