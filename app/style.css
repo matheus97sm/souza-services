@@ -217,9 +217,9 @@ h2 {
     .home-banner-text .line.animar {
       height: 240px; }
   .home-banner-text h1 {
-    width: 210px;
     color: #717171;
-    font-size: 3rem;
+    width: 260px;
+    font-size: 1.8rem;
     font-weight: bolder; }
 
 .home-banner-buttons {
@@ -314,7 +314,7 @@ h2 {
   padding: 64px 0; }
 
 .our-review-title {
-  width: 180px;
+  width: 240px;
   margin-bottom: 32px; }
 
 .reviews {

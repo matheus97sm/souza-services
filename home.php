@@ -11,12 +11,12 @@ get_header(); ?>
 <section class="home-banner">
   <div class="container">
     <div class="home-banner-text fadeUp" data-anima-tempo>
-      <h1>A big title here</h1>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla id magna nec nibh tristique porttitor non quis massa. Etiam gravida consequat pharetra.</p>
+      <h1>Efficient, careful cleaning and customized to what you really need.</h1>
+      <p>Our biggest goal is to provide you and your family with excellent cleaning, so you can enjoy the comfort of your home.</p>
 
       <div class="home-banner-buttons">
-        <a href="<?=site_url()?>/contact" class="cta cta-red">Contact Us</a>
-        <a href="<?=site_url()?>/about" class="cta cta-white">About Us</a>
+        <a href="<?=site_url()?>/services" class="cta cta-red">SERVICES</a>
+        <a href="<?=site_url()?>/contact" class="cta cta-white">GET A QUOTE</a>
       </div>
 
       <div class="line" data-animar></div>
@@ -33,7 +33,7 @@ get_header(); ?>
 <section class="our-reviews">
   <div class="container">
     <div class="our-review-title fadeUp" data-animar>
-      <h2>Our reviews</h2>
+      <h2>Our</br> clients say</h2>
     </div>
 
     <div class="reviews fadeUp" data-animar>
@@ -112,8 +112,8 @@ get_header(); ?>
       <h2 class="fadeUp" data-animar>About Us</h2>
 
       <div class="fadeUp" data-animar>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam vel lorem eget ex semper vulputate. Aliquam nec iaculis quam. Quisque ullamcorper libero quis feugiat hendrerit. Praesent luctus eu massa vel ornare. Sed quis iaculis erat. Vivamus sollicitudin, urna eget placerat vulputate, odio tellus placerat lectus, non volutpat tortor diam sed turpis. Sed eget pharetra risus. </p>
-        <p>Nunc laoreet sapien placerat lobortis feugiat. Etiam a purus dolor. In pellentesque non risus in pharetra. Nullam pharetra diam non maximus egestas. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nulla facilisi.</p>
+        <p>Souza Services was born from the desire to provide its customers with the experience of having their home cleaned by a trained and experienced team, always prioritizing personalized service according to their real needs. Thanks to our attention and focus on details, the company has been providing excellent service in the Charlotte area.</p>
+        <p>We understand that the routine is full of commitments and often stressful. For this reason, we have come with a mission to facilitate and take over this task: the cleaning of your home. This way you can guarantee to use your time for what really matters, such as having more free time with your family or simply having more time to focus on your work. Whatever your goal is when you delegate this task to us, we are ready to surprise you!</p>
       </div>
 
       <a href="<?=site_url()?>/about" class="cta cta-white fadeUp" data-animar>About Us</a>
@@ -133,6 +133,8 @@ get_header(); ?>
   />
 </section>
 
+<? query_posts( array( 'post_type' => 'post', 'posts_per_page' => '5', 'cat' => '1' ) );  ?>
+<?php if ( have_posts() ) : ?>
 <section class="home-blog">
   <div class="container">
     <h2 class="fadeUp" data-animar>Last blog posts</h2>
@@ -141,8 +143,6 @@ get_header(); ?>
       <div class="home-blog-buttons"></div>
 
       <div class="home-blog-posts">
-        <? query_posts( array( 'post_type' => 'post', 'posts_per_page' => '5', 'cat' => '1' ) );  ?>
-        <?php if ( have_posts() ) : ?>
         <?php while ( have_posts() ) : the_post(); ?>
 
         <div class="home-blog-card">
@@ -162,7 +162,6 @@ get_header(); ?>
         </div>
 
         <?php endwhile; ?>
-        <?php endif; ?>
       </div>
 
       <img
@@ -173,5 +172,6 @@ get_header(); ?>
     </div>
   </div>
 </section>
+<?php endif; ?>
 
 <?php get_footer();
