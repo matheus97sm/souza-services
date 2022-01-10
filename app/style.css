@@ -293,7 +293,8 @@ h2 {
     margin-top: 32px; }
   .home-banner-img img {
     width: auto;
-    height: 55vh; }
+    height: 55vh;
+    min-height: 461px; }
   .home-banner-img .grey-box {
     right: -5%; }
   .home-banner-img .orange-box {
