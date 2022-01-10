@@ -133,13 +133,28 @@
     }
   
     h1 {
-      width: 240px;
-      font-size: 3.5rem;
+      width: auto;
+      font-size: 2.1rem;
     }
   }
 
   .home-banner-buttons {
     margin-top: 32px;
+  }
+  
+  .home-banner-img {
+    img {  
+      width: auto;
+      height: 55vh;
+    }
+
+    .grey-box {
+      right: -5%;
+    }
+
+    .orange-box {
+      right: 0;
+    }
   }
 }
 

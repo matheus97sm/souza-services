@@ -287,10 +287,17 @@ h2 {
     .home-banner-text .line.animar {
       height: 460px; }
   .home-banner-text h1 {
-    width: 240px;
-    font-size: 3.5rem; }
+    width: auto;
+    font-size: 2.1rem; }
   .home-banner-buttons {
-    margin-top: 32px; } }
+    margin-top: 32px; }
+  .home-banner-img img {
+    width: auto;
+    height: 55vh; }
+  .home-banner-img .grey-box {
+    right: -5%; }
+  .home-banner-img .orange-box {
+    right: 0; } }
 
 @keyframes boxAnimation {
   0% {
