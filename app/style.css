@@ -963,12 +963,12 @@ h2 {
   .content-text {
     padding: 0; }
     .content-text .container {
-      padding: 128px 0 128px 256px; }
+      padding: 128px 256px; }
     .content-text h1, .content-text h2, .content-text h3, .content-text h4, .content-text h5, .content-text h6 {
       padding-left: 156px;
       margin-top: 32px; }
     .content-text p, .content-text ul, .content-text ol {
-      padding-left: 196px; }
+      padding-left: 0; }
     .content-text img, .content-text figure {
       padding-left: 0; } }
 

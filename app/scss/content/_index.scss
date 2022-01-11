@@ -63,7 +63,7 @@
     padding: 0;
      
     .container {
-      padding: 128px 0 128px 256px;
+      padding: 128px 256px;
     }
 
     h1, h2, h3, h4, h5, h6 {
@@ -72,7 +72,7 @@
     }
 
     p, ul, ol {
-      padding-left: 196px;
+      padding-left: 0;
     }
 
     img, figure {
