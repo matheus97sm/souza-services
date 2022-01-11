@@ -16,6 +16,19 @@
     padding-left: 5%;
   }
 
+  ul, ol {
+    margin: 1rem 0;
+    font-size: 1rem;
+    letter-spacing: .03rem;
+    line-height: 1.5rem;
+    color: $grey;
+  }
+  
+  li {
+    margin-left: 18px;
+    list-style: disc;
+  }
+
   img {
     margin: 32px 0;
     width: 100%;
