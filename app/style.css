@@ -859,13 +859,15 @@ h2 {
         letter-spacing: .02rem;
         margin-bottom: 8px; }
       .contact .container form input,
-      .contact .container form textarea {
+      .contact .container form textarea,
+      .contact .container form select {
         width: 100%;
         padding: 8px 16px;
         border: 1px solid #F6C7B3;
         border-radius: 12px; }
         .contact .container form input::placeholder,
-        .contact .container form textarea::placeholder {
+        .contact .container form textarea::placeholder,
+        .contact .container form select::placeholder {
           color: #F6C7B3; }
       .contact .container form input[type="submit"] {
         justify-content: center;
