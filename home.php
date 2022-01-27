@@ -8,11 +8,17 @@
  */
 get_header(); ?>
 
+<?php if( have_rows('banner') ):
+while( have_rows('banner') ): the_row(); 
+
+$title = get_sub_field('title');
+$text = get_sub_field('text');
+?>
 <section class="home-banner">
   <div class="container">
     <div class="home-banner-text fadeUp" data-anima-tempo>
-      <h1>Efficient, careful cleaning and customized to what you really need.</h1>
-      <p>Our biggest goal is to provide you and your family with excellent cleaning, so you can enjoy the comfort of your home.</p>
+      <h1><?=$title?></h1>
+      <p><?=$text?></p>
 
       <div class="home-banner-buttons">
         <a href="<?=site_url()?>/services" class="cta cta-red">SERVICES</a>
@@ -29,6 +35,8 @@ get_header(); ?>
     </div>
   </div>
 </section>
+<?php endwhile; ?>
+<?php endif; ?>
 
 <section class="our-reviews">
   <div class="container">
@@ -101,6 +109,17 @@ get_header(); ?>
   <a href="<?=the_permalink()?>" class="cta-red cta fadeUp" data-animar>All services</a>
 </section>
 
+<?php 
+wp_reset_query();
+if( have_rows('about') ):
+while( have_rows('about') ): the_row(); 
+
+$subtitle = get_sub_field('subtitle');
+$title = get_sub_field('title');
+$text = get_sub_field('text');
+$button_name = get_sub_field('button_name');
+$button_link = get_sub_field('button_link');
+?>
 <section class="home-about">
   <div class="container">
     <div class="home-about-img fadeUp" data-animar>
@@ -108,15 +127,14 @@ get_header(); ?>
     </div>
 
     <div class="home-about-text">
-      <strong class="fadeUp" data-animar>Souza Services</strong>
-      <h2 class="fadeUp" data-animar>About Us</h2>
+      <strong class="fadeUp" data-animar><?=$subtitle?></strong>
+      <h2 class="fadeUp" data-animar><?=$title?></h2>
 
       <div class="fadeUp" data-animar>
-        <p>Souza Services was born from the desire to provide its customers with the experience of having their home cleaned by a trained and experienced team, always prioritizing personalized service according to their real needs. Thanks to our attention and focus on details, the company has been providing excellent service in the Charlotte area.</p>
-        <p>We understand that the routine is full of commitments and often stressful. For this reason, we have come with a mission to facilitate and take over this task: the cleaning of your home. This way you can guarantee to use your time for what really matters, such as having more free time with your family or simply having more time to focus on your work. Whatever your goal is when you delegate this task to us, we are ready to surprise you!</p>
+        <?=$text?>
       </div>
 
-      <a href="<?=site_url()?>/about" class="cta cta-white fadeUp" data-animar>About Us</a>
+      <a href="<?=$button_link?>" class="cta cta-white fadeUp" data-animar><?=$button_name?></a>
 
       <img 
         src="<?=get_template_directory_URI()?>/img/src/wave.svg" 
@@ -132,6 +150,8 @@ get_header(); ?>
     class="home-about-logo" 
   />
 </section>
+<?php endwhile; ?>
+<?php endif; ?>
 
 <? query_posts( array( 'post_type' => 'post', 'posts_per_page' => '5', 'cat' => '1' ) );  ?>
 <?php if ( have_posts() ) : ?>
