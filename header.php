@@ -63,12 +63,16 @@
         <img src="<?=get_template_directory_URI()?>/img/src/logo.svg" alt="Souza Services Brand">
       </a>
 
-      <nav class="menu" data-menu="menu">
-        <?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu' => 'MenuTopo', 'menu_class' => 'nav-menu', 'menu_id' => 'primary-menu' ) ); ?>
-      </nav>
+      <div class="header-right">
+        <nav class="menu" data-menu="menu">
+          <?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu' => 'MenuTopo', 'menu_class' => 'nav-menu', 'menu_id' => 'primary-menu' ) ); ?>
+        </nav>
 
-      <div class="menu-hamb" data-menu="button">
-        <span></span>
+        <a href="tel:(704)846-2855" class="cta cta-red" target="_blank">(704) 846-2855</a>
+
+        <div class="menu-hamb" data-menu="button">
+          <span></span>
+        </div>
       </div>
     </div>
   </header>

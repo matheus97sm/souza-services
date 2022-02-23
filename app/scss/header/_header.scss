@@ -16,6 +16,11 @@
   }
 }
 
+.header-right {
+  display: flex;
+  gap: 32px;
+}
+
 .header-logo img {
   width: 130px;
 }
